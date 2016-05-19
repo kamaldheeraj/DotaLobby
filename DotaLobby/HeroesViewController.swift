@@ -2,7 +2,7 @@
 //  HeroesViewController.swift
 //  DotaLobby
 //
-//  Created by Vensi Developer on 5/16/16.
+//  Created by Kamal Dandamudi on 5/16/16.
 //  Copyright © 2016 SillyApps. All rights reserved.
 //
 

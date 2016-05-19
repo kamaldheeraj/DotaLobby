@@ -2,7 +2,7 @@
 //  HeroDetail.swift
 //  ParseAbaddon
 //
-//  Created by Vensi Developer on 5/17/16.
+//  Created by Kamal Dandamudi on 5/17/16.
 //  Copyright © 2016 SillyApps. All rights reserved.
 //
 
