@@ -15,6 +15,8 @@ class HeroTableViewCell: UITableViewCell {
     
     @IBOutlet var heroNameLabel: UILabel!
     
+    var hero:Hero?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

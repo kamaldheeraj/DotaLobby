@@ -31,6 +31,7 @@ class HeroesViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("heroCell") as! HeroTableViewCell
         let hero = heroes[indexPath.row]
+        cell.hero = hero
         cell.heroNameLabel.text = hero.heroLocalizedName
         if let heroSmallImageURL = hero.smallImageURL{
             dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)){
@@ -47,6 +48,15 @@ class HeroesViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 70
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destVC = segue.destinationViewController as! HeroDetailViewController
+        if let cell = sender as? HeroTableViewCell{
+            destVC.hero = cell.hero
+        }
+    }
+    
     
     func downloadHeroesFromAPI(){
         Alamofire.request(.GET, "http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v0001/?key=AB1D26186DE124C7CCA58075043D3B75",parameters: ["language":"en-us"],encoding: .URL).validate().responseJSON(){
@@ -74,7 +84,8 @@ class HeroesViewController: UIViewController, UITableViewDataSource, UITableView
                 let imageHeroName = name.stringByReplacingOccurrencesOfString("npc_dota_hero_", withString: "")
                 let largeURL = "http://media.steampowered.com/apps/dota2/images/heroes/\(imageHeroName)_sb.png"
                 let smallURL = "http://media.steampowered.com/apps/dota2/images/heroes/\(imageHeroName)_sb.png"
-                self.heroes.append(Hero(heroDotaName: name, heroLocalizedName: localizedName, heroID: id,largeImageURL: largeURL,smallImageURL: smallURL))
+                let portraitURL = "http://cdn.dota2.com/apps/dota2/images/heroes/\(imageHeroName)_vert.jpg"
+                self.heroes.append(Hero(heroDotaName: name.stringByReplacingOccurrencesOfString("npc_dota_hero_", withString: ""), heroLocalizedName: localizedName, heroID: id,largeImageURL: largeURL,smallImageURL: smallURL,portraitImageURL: portraitURL))
             }
             self.heroesTableView.reloadData()
         }

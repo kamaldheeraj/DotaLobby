@@ -15,12 +15,14 @@ class Hero{
     var heroID:Int!
     var largeImageURL:String?
     var smallImageURL:String?
+    var portraitImageURL:String?
     
-    init(heroDotaName:String,heroLocalizedName:String,heroID:Int,largeImageURL:String,smallImageURL:String){
+    init(heroDotaName:String,heroLocalizedName:String,heroID:Int,largeImageURL:String,smallImageURL:String,portraitImageURL:String){
         self.heroDotaName = heroDotaName
         self.heroLocalizedName = heroLocalizedName
         self.heroID = heroID
         self.largeImageURL = largeImageURL
         self.smallImageURL = smallImageURL
+        self.portraitImageURL = portraitImageURL
     }
 }

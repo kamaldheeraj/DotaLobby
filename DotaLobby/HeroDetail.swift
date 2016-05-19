@@ -9,7 +9,7 @@
 import Foundation
 
 class HeroDetail{
-    var name:String
+    var hero:Hero
     var primaryAttribute:PrimaryAttribute
     var roles:[String]
     var attackType:AttackType
@@ -28,8 +28,8 @@ class HeroDetail{
     var baseAttackLow:Double
     var baseAttackHigh:Double
     var abilities:[Ability]
-    init(name:String,primaryAttribute:PrimaryAttribute,roles:[String], attackType:AttackType,baseStrength:Double,baseAgility:Double,baseIntelligence:Double,strengthIncrease:Double,agilityIncrease:Double,intelligenceIncrease:Double,movementSpeed:Double,turnRate:Double,sightRangeDay:Double,sightRangeNight:Double,attackRange:Double,baseArmor:Double,baseAttackLow:Double,baseAttackHigh:Double,abilities:[Ability]){
-        self.name = name
+    init(hero:Hero,primaryAttribute:PrimaryAttribute,roles:[String], attackType:AttackType,baseStrength:Double,baseAgility:Double,baseIntelligence:Double,strengthIncrease:Double,agilityIncrease:Double,intelligenceIncrease:Double,movementSpeed:Double,turnRate:Double,sightRangeDay:Double,sightRangeNight:Double,attackRange:Double,baseArmor:Double,baseAttackLow:Double,baseAttackHigh:Double,abilities:[Ability]){
+        self.hero = hero
         self.primaryAttribute = primaryAttribute
         self.roles = roles
         self.attackType = attackType
@@ -70,7 +70,7 @@ class Ability{
 enum PrimaryAttribute{
     case Strength
     case Agility
-    case Doubleelligence
+    case Intelligence
 }
 
 enum AttackType{

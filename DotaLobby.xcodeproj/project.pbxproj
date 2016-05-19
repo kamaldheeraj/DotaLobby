@@ -18,6 +18,12 @@
 		28B271321CEA4A3B00A10C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B271311CEA4A3B00A10C46 /* Assets.xcassets */; };
 		28B271351CEA4A3B00A10C46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B271331CEA4A3B00A10C46 /* LaunchScreen.storyboard */; };
 		28F0F3AE1CED13B60092A16F /* HeroDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0F3AD1CED13B60092A16F /* HeroDetail.swift */; };
+		28FBEFB31CEE37A300DFFB90 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBEFB21CEE37A300DFFB90 /* HeroDetailViewController.swift */; };
+		28FBEFBD1CEE39E500DFFB90 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FBEFB71CEE39E500DFFB90 /* TFHpple.m */; };
+		28FBEFBE1CEE39E500DFFB90 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FBEFB91CEE39E500DFFB90 /* TFHppleElement.m */; };
+		28FBEFBF1CEE39E500DFFB90 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FBEFBB1CEE39E500DFFB90 /* XPathQuery.m */; };
+		28FBEFC11CEE3A1D00DFFB90 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FBEFC01CEE3A1D00DFFB90 /* libxml2.2.tbd */; };
+		28FBEFC31CEE898B00DFFB90 /* AbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBEFC21CEE898B00DFFB90 /* AbilityView.swift */; };
 		ACD3F99E0FB1FC5C8854BB79 /* Pods_DotaLobby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4D735F67BCFD3B3FE15AD1 /* Pods_DotaLobby.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +41,16 @@
 		28B271341CEA4A3B00A10C46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28B271361CEA4A3B00A10C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28F0F3AD1CED13B60092A16F /* HeroDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetail.swift; sourceTree = "<group>"; };
+		28FBEFB21CEE37A300DFFB90 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		28FBEFB51CEE39E500DFFB90 /* DotaLobby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DotaLobby-Bridging-Header.h"; sourceTree = "<group>"; };
+		28FBEFB61CEE39E500DFFB90 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		28FBEFB71CEE39E500DFFB90 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		28FBEFB81CEE39E500DFFB90 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		28FBEFB91CEE39E500DFFB90 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		28FBEFBA1CEE39E500DFFB90 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		28FBEFBB1CEE39E500DFFB90 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		28FBEFC01CEE3A1D00DFFB90 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		28FBEFC21CEE898B00DFFB90 /* AbilityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbilityView.swift; sourceTree = "<group>"; };
 		2E4D735F67BCFD3B3FE15AD1 /* Pods_DotaLobby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaLobby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45043C9BCE5312EDD2A49749 /* Pods-DotaLobby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaLobby.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotaLobby/Pods-DotaLobby.release.xcconfig"; sourceTree = "<group>"; };
 		B4850A4B19EBE4F4CEE6EF46 /* Pods-DotaLobby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaLobby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotaLobby/Pods-DotaLobby.debug.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FBEFC11CEE3A1D00DFFB90 /* libxml2.2.tbd in Frameworks */,
 				ACD3F99E0FB1FC5C8854BB79 /* Pods_DotaLobby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +97,8 @@
 				28B2712C1CEA4A3B00A10C46 /* ItemsViewController.swift */,
 				289A3C821CEA61B00006DC30 /* MatchesViewController.swift */,
 				28B2712E1CEA4A3B00A10C46 /* Main.storyboard */,
+				28FBEFC21CEE898B00DFFB90 /* AbilityView.swift */,
+				28FBEFB21CEE37A300DFFB90 /* HeroDetailViewController.swift */,
 				289A3C881CEA7F880006DC30 /* HeroTableViewCell.swift */,
 				28F0F3AD1CED13B60092A16F /* HeroDetail.swift */,
 				28B271311CEA4A3B00A10C46 /* Assets.xcassets */,
@@ -87,6 +106,20 @@
 				28B271361CEA4A3B00A10C46 /* Info.plist */,
 			);
 			path = DotaLobby;
+			sourceTree = "<group>";
+		};
+		28FBEFB41CEE39CB00DFFB90 /* TFHpple */ = {
+			isa = PBXGroup;
+			children = (
+				28FBEFB61CEE39E500DFFB90 /* TFHpple.h */,
+				28FBEFB71CEE39E500DFFB90 /* TFHpple.m */,
+				28FBEFB81CEE39E500DFFB90 /* TFHppleElement.h */,
+				28FBEFB91CEE39E500DFFB90 /* TFHppleElement.m */,
+				28FBEFBA1CEE39E500DFFB90 /* XPathQuery.h */,
+				28FBEFBB1CEE39E500DFFB90 /* XPathQuery.m */,
+				28FBEFB51CEE39E500DFFB90 /* DotaLobby-Bridging-Header.h */,
+			);
+			name = TFHpple;
 			sourceTree = "<group>";
 		};
 		87031A4D05D79711B4EA5DD7 /* Pods */ = {
@@ -101,6 +134,8 @@
 		E7695284E3D4C28CAD48DB35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28FBEFC01CEE3A1D00DFFB90 /* libxml2.2.tbd */,
+				28FBEFB41CEE39CB00DFFB90 /* TFHpple */,
 				2E4D735F67BCFD3B3FE15AD1 /* Pods_DotaLobby.framework */,
 			);
 			name = Frameworks;
@@ -233,9 +268,14 @@
 				28B2712D1CEA4A3B00A10C46 /* ItemsViewController.swift in Sources */,
 				28B271291CEA4A3B00A10C46 /* AppDelegate.swift in Sources */,
 				28F0F3AE1CED13B60092A16F /* HeroDetail.swift in Sources */,
+				28FBEFBD1CEE39E500DFFB90 /* TFHpple.m in Sources */,
 				289A3C831CEA61B00006DC30 /* MatchesViewController.swift in Sources */,
+				28FBEFB31CEE37A300DFFB90 /* HeroDetailViewController.swift in Sources */,
 				289A3C891CEA7F880006DC30 /* HeroTableViewCell.swift in Sources */,
+				28FBEFC31CEE898B00DFFB90 /* AbilityView.swift in Sources */,
 				28B2712B1CEA4A3B00A10C46 /* HeroesViewController.swift in Sources */,
+				28FBEFBF1CEE39E500DFFB90 /* XPathQuery.m in Sources */,
+				28FBEFBE1CEE39E500DFFB90 /* TFHppleElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $SDKROOT/usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -338,6 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $SDKROOT/usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -351,10 +393,13 @@
 			baseConfigurationReference = B4850A4B19EBE4F4CEE6EF46 /* Pods-DotaLobby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DotaLobby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sillyapps.DotaLobby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DotaLobby-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -363,10 +408,12 @@
 			baseConfigurationReference = 45043C9BCE5312EDD2A49749 /* Pods-DotaLobby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DotaLobby/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sillyapps.DotaLobby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DotaLobby-Bridging-Header.h";
 			};
 			name = Release;
 		};
