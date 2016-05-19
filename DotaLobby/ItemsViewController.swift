@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ItemsViewController.swift
 //  DotaLobby
 //
 //  Created by Vensi Developer on 5/16/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ItemsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
