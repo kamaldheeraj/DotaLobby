@@ -29,12 +29,15 @@ class HeroDetailViewController: UIViewController {
     @IBOutlet var armorLabel: UILabel!
     
     @IBOutlet var bioLabel: UILabel!
+    
+    @IBOutlet var abilityView1: AbilityView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         if hero != nil {
             self.navigationItem.title = hero?.heroLocalizedName
-            downloadHeroPortrait()
+            downloadImageFromURL(hero!.portraitImageURL!, forImageView: heroImageView)
             parseHeroWithName(hero!.heroLocalizedName.stringByReplacingOccurrencesOfString(" ", withString: "_"))
         }
     }
@@ -291,21 +294,24 @@ class HeroDetailViewController: UIViewController {
         attackLabel.text = String(Int(heroDetail!.baseAttackLow)) + " - " + String(Int(heroDetail!.baseAttackHigh))
         speedLabel.text = String(Int(heroDetail!.movementSpeed))
         armorLabel.text = String(heroDetail!.baseArmor)
+        downloadImageFromURL(heroDetail!.abilities[0].urlSmall, forImageView: abilityView1.imageView)
+        abilityView1.titleLabel.text = heroDetail!.abilities[0].name
+        abilityView1.abilityDescription.text = heroDetail!.abilities[0].description
         //let end = NSDate();
         //let timeInterval: Double = end.timeIntervalSinceDate(start);
         //print(timeInterval)
     }
     
-    func downloadHeroPortrait(){
+    func downloadImageFromURL(url:String,forImageView imageView:UIImageView){
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)){
-            guard let url = NSURL(string:self.hero!.portraitImageURL!) else{
+            guard let url = NSURL(string:url) else{
                 return
             }
             guard let data = NSData(contentsOfURL: url) else{
                 return
             }
             dispatch_async(dispatch_get_main_queue()){
-                self.heroImageView.image = UIImage(data: data)
+               imageView.image = UIImage(data: data)
             }
         }
     }

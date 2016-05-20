@@ -23,7 +23,8 @@
 		28FBEFBE1CEE39E500DFFB90 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FBEFB91CEE39E500DFFB90 /* TFHppleElement.m */; };
 		28FBEFBF1CEE39E500DFFB90 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FBEFBB1CEE39E500DFFB90 /* XPathQuery.m */; };
 		28FBEFC11CEE3A1D00DFFB90 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FBEFC01CEE3A1D00DFFB90 /* libxml2.2.tbd */; };
-		28FBEFC31CEE898B00DFFB90 /* AbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBEFC21CEE898B00DFFB90 /* AbilityView.swift */; };
+		28FBEFC51CEE8B9E00DFFB90 /* AbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBEFC41CEE8B9E00DFFB90 /* AbilityView.swift */; };
+		28FBEFC71CEE8FF700DFFB90 /* AbilityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FBEFC61CEE8FF700DFFB90 /* AbilityView.xib */; };
 		ACD3F99E0FB1FC5C8854BB79 /* Pods_DotaLobby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4D735F67BCFD3B3FE15AD1 /* Pods_DotaLobby.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +51,8 @@
 		28FBEFBA1CEE39E500DFFB90 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		28FBEFBB1CEE39E500DFFB90 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		28FBEFC01CEE3A1D00DFFB90 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
-		28FBEFC21CEE898B00DFFB90 /* AbilityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbilityView.swift; sourceTree = "<group>"; };
+		28FBEFC41CEE8B9E00DFFB90 /* AbilityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbilityView.swift; sourceTree = "<group>"; };
+		28FBEFC61CEE8FF700DFFB90 /* AbilityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AbilityView.xib; sourceTree = "<group>"; };
 		2E4D735F67BCFD3B3FE15AD1 /* Pods_DotaLobby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaLobby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45043C9BCE5312EDD2A49749 /* Pods-DotaLobby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaLobby.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotaLobby/Pods-DotaLobby.release.xcconfig"; sourceTree = "<group>"; };
 		B4850A4B19EBE4F4CEE6EF46 /* Pods-DotaLobby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaLobby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotaLobby/Pods-DotaLobby.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		28B271271CEA4A3B00A10C46 /* DotaLobby */ = {
 			isa = PBXGroup;
 			children = (
+				28FBEFC41CEE8B9E00DFFB90 /* AbilityView.swift */,
 				28B271281CEA4A3B00A10C46 /* AppDelegate.swift */,
 				28B2712A1CEA4A3B00A10C46 /* HeroesViewController.swift */,
 				289A3C841CEA64080006DC30 /* Hero.swift */,
@@ -97,7 +100,7 @@
 				28B2712C1CEA4A3B00A10C46 /* ItemsViewController.swift */,
 				289A3C821CEA61B00006DC30 /* MatchesViewController.swift */,
 				28B2712E1CEA4A3B00A10C46 /* Main.storyboard */,
-				28FBEFC21CEE898B00DFFB90 /* AbilityView.swift */,
+				28FBEFC61CEE8FF700DFFB90 /* AbilityView.xib */,
 				28FBEFB21CEE37A300DFFB90 /* HeroDetailViewController.swift */,
 				289A3C881CEA7F880006DC30 /* HeroTableViewCell.swift */,
 				28F0F3AD1CED13B60092A16F /* HeroDetail.swift */,
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28B271351CEA4A3B00A10C46 /* LaunchScreen.storyboard in Resources */,
+				28FBEFC71CEE8FF700DFFB90 /* AbilityView.xib in Resources */,
 				28B271321CEA4A3B00A10C46 /* Assets.xcassets in Resources */,
 				28B271301CEA4A3B00A10C46 /* Main.storyboard in Resources */,
 			);
@@ -272,7 +276,7 @@
 				289A3C831CEA61B00006DC30 /* MatchesViewController.swift in Sources */,
 				28FBEFB31CEE37A300DFFB90 /* HeroDetailViewController.swift in Sources */,
 				289A3C891CEA7F880006DC30 /* HeroTableViewCell.swift in Sources */,
-				28FBEFC31CEE898B00DFFB90 /* AbilityView.swift in Sources */,
+				28FBEFC51CEE8B9E00DFFB90 /* AbilityView.swift in Sources */,
 				28B2712B1CEA4A3B00A10C46 /* HeroesViewController.swift in Sources */,
 				28FBEFBF1CEE39E500DFFB90 /* XPathQuery.m in Sources */,
 				28FBEFBE1CEE39E500DFFB90 /* TFHppleElement.m in Sources */,

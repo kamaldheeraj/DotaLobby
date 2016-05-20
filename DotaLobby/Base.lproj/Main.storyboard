@@ -93,7 +93,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmZ-6N-B9q">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmZ-6N-B9q">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jy1-cW-98c" userLabel="Scroll View Width Controller">
@@ -202,37 +202,10 @@
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iB0-FN-jbW" userLabel="Ability View 1" customClass="AbilityView" customModule="DotaLobby" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iB0-FN-jbW" userLabel="Ability View 1" customClass="AbilityView" customModule="DotaLobby">
                                         <rect key="frame" x="0.0" y="470" width="600" height="100"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6P9-KB-IIO">
-                                                <rect key="frame" x="20" y="5" width="90" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="9Lb-bq-ih4"/>
-                                                    <constraint firstAttribute="height" constant="90" id="lMj-M1-tDt"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnb-Sy-ie8" userLabel="Ability Title Label">
-                                                <rect key="frame" x="125" y="5" width="48.5" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIG-0K-mL9" userLabel="Ability Desc Label">
-                                                <rect key="frame" x="125" y="28" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
                                         <color key="backgroundColor" red="0.13725490200000001" green="0.14117647059999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="UIG-0K-mL9" firstAttribute="leading" secondItem="Rnb-Sy-ie8" secondAttribute="leading" id="2uL-rY-fpn"/>
-                                            <constraint firstItem="Rnb-Sy-ie8" firstAttribute="top" secondItem="6P9-KB-IIO" secondAttribute="top" id="6vx-1j-cSO"/>
-                                            <constraint firstItem="6P9-KB-IIO" firstAttribute="leading" secondItem="iB0-FN-jbW" secondAttribute="leading" constant="20" id="7Lv-RD-oUl"/>
-                                            <constraint firstItem="Rnb-Sy-ie8" firstAttribute="leading" secondItem="6P9-KB-IIO" secondAttribute="trailing" constant="15" id="DZr-27-hO9"/>
-                                            <constraint firstItem="6P9-KB-IIO" firstAttribute="centerY" secondItem="iB0-FN-jbW" secondAttribute="centerY" id="VeG-6J-Y3h"/>
-                                            <constraint firstItem="UIG-0K-mL9" firstAttribute="top" secondItem="Rnb-Sy-ie8" secondAttribute="bottom" id="mmI-27-e6S"/>
                                             <constraint firstAttribute="height" constant="100" id="zQL-7e-MTa"/>
                                         </constraints>
                                     </view>
@@ -277,7 +250,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.14117647058823529" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="iB0-FN-jbW" firstAttribute="width" secondItem="yqs-Bn-5q3" secondAttribute="width" id="Cen-pk-lbD"/>
                             <constraint firstItem="9bX-9d-1Bk" firstAttribute="centerX" secondItem="yqs-Bn-5q3" secondAttribute="centerX" id="Deh-qT-blK"/>
                             <constraint firstItem="iB0-FN-jbW" firstAttribute="leading" secondItem="yqs-Bn-5q3" secondAttribute="leadingMargin" constant="-20" id="GpR-gJ-Lnh"/>
                             <constraint firstItem="Jy1-cW-98c" firstAttribute="width" secondItem="yqs-Bn-5q3" secondAttribute="width" id="VFc-6X-1RU"/>
@@ -286,10 +258,12 @@
                             <constraint firstItem="gmZ-6N-B9q" firstAttribute="top" secondItem="YKy-mu-03Q" secondAttribute="bottom" id="gNS-V8-eMQ"/>
                             <constraint firstItem="9bX-9d-1Bk" firstAttribute="centerY" secondItem="yqs-Bn-5q3" secondAttribute="centerY" id="kBQ-Rw-oKX"/>
                             <constraint firstItem="UU3-d6-Bcc" firstAttribute="centerX" secondItem="yqs-Bn-5q3" secondAttribute="centerX" id="nkC-nX-lg2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iB0-FN-jbW" secondAttribute="trailing" constant="-20" id="trT-Ws-coY"/>
                             <constraint firstItem="bY6-MP-chc" firstAttribute="top" secondItem="gmZ-6N-B9q" secondAttribute="bottom" id="zof-zv-qyQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="abilityView1" destination="iB0-FN-jbW" id="V3y-iG-ZRK"/>
                         <outlet property="agilityLabel" destination="95V-sm-Z81" id="TpF-gK-YkY"/>
                         <outlet property="armorLabel" destination="gEo-qW-lSZ" id="mA5-zN-RIs"/>
                         <outlet property="attackLabel" destination="VQ9-EF-Cil" id="iz0-x4-psk"/>
