@@ -49,7 +49,6 @@ class HeroesViewController: UIViewController, UITableViewDataSource, UITableView
         return 70
     }
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destVC = segue.destinationViewController as! HeroDetailViewController
         if let cell = sender as? HeroTableViewCell{
@@ -86,6 +85,9 @@ class HeroesViewController: UIViewController, UITableViewDataSource, UITableView
                 let smallURL = "http://media.steampowered.com/apps/dota2/images/heroes/\(imageHeroName)_sb.png"
                 let portraitURL = "http://cdn.dota2.com/apps/dota2/images/heroes/\(imageHeroName)_vert.jpg"
                 self.heroes.append(Hero(heroDotaName: name.stringByReplacingOccurrencesOfString("npc_dota_hero_", withString: ""), heroLocalizedName: localizedName, heroID: id,largeImageURL: largeURL,smallImageURL: smallURL,portraitImageURL: portraitURL))
+            }
+            self.heroes.sortInPlace(){
+                $0.heroLocalizedName < $1.heroLocalizedName
             }
             self.heroesTableView.reloadData()
         }

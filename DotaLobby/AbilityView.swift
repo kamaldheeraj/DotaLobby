@@ -16,7 +16,8 @@ class AbilityView: UIView {
 
     @IBOutlet var titleLabel: UILabel!
     
-    @IBOutlet var abilityDescription: UILabel!
+    @IBOutlet var abilityDescription: UITextView!
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,6 +37,14 @@ class AbilityView: UIView {
         guard let content = contentView else { return }
         content.frame = self.bounds
         content.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
+        if let view = imageView{
+            let shadowPath = UIBezierPath(rect: view.bounds)
+            view.layer.masksToBounds = false
+            view.layer.shadowColor = UIColor.blackColor().CGColor
+            view.layer.shadowOffset = CGSizeMake(0.0, 5.0)
+            view.layer.shadowOpacity = 0.5
+            view.layer.shadowPath = shadowPath.CGPath
+        }
         self.addSubview(content)
     }
 

@@ -19,35 +19,50 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-NB-O33">
-                    <rect key="frame" x="15" y="255" width="90" height="90"/>
+                    <rect key="frame" x="15" y="0.0" width="90" height="90"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="90" id="O5U-hv-0Y3"/>
                         <constraint firstAttribute="height" constant="90" id="wWf-Fj-ILQ"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ4-42-fdx" userLabel="Ability Title Label">
-                    <rect key="frame" x="120" y="255" width="48.5" height="23"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msQ-2o-cSa" userLabel="Ability Desc Label">
-                    <rect key="frame" x="120" y="278" width="475" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dA-oi-VHY">
+                    <rect key="frame" x="115" y="-2" width="475" height="602"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ4-42-fdx" userLabel="Ability Title Label">
+                            <rect key="frame" x="0.0" y="0.0" width="38.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msQ-2o-cSa" userLabel="Ability Desc Label">
+                            <rect key="frame" x="0.0" y="16" width="465" height="586"/>
+                            <string key="text">Burns an opponent's mana on each attack. Mana Break deals 60% of the mana burned as damage to the target. Mana Break is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="mQ4-42-fdx" firstAttribute="top" secondItem="8dA-oi-VHY" secondAttribute="top" id="FZZ-gB-gha"/>
+                        <constraint firstAttribute="bottom" secondItem="msQ-2o-cSa" secondAttribute="bottom" id="IWm-EB-dsb"/>
+                        <constraint firstItem="msQ-2o-cSa" firstAttribute="leading" secondItem="mQ4-42-fdx" secondAttribute="leading" id="WzZ-AD-Ba9"/>
+                        <constraint firstAttribute="trailing" secondItem="msQ-2o-cSa" secondAttribute="trailing" constant="10" id="aHy-2I-nY2"/>
+                        <constraint firstItem="mQ4-42-fdx" firstAttribute="leading" secondItem="8dA-oi-VHY" secondAttribute="leading" id="lVo-5r-Q50"/>
+                        <constraint firstItem="msQ-2o-cSa" firstAttribute="top" secondItem="mQ4-42-fdx" secondAttribute="bottom" constant="-2" id="wjb-5c-IiR"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.13725490200000001" green="0.14117647059999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="mQ4-42-fdx" firstAttribute="leading" secondItem="5xb-NB-O33" secondAttribute="trailing" constant="15" id="5p0-Ad-XEa"/>
+                <constraint firstItem="8dA-oi-VHY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-2" id="6zL-l0-qgv"/>
                 <constraint firstItem="5xb-NB-O33" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Gae-pL-ozC"/>
-                <constraint firstItem="msQ-2o-cSa" firstAttribute="leading" secondItem="mQ4-42-fdx" secondAttribute="leading" id="SBp-De-dfq"/>
-                <constraint firstItem="mQ4-42-fdx" firstAttribute="top" secondItem="5xb-NB-O33" secondAttribute="top" id="if6-tP-KgD"/>
-                <constraint firstItem="5xb-NB-O33" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jsp-v8-pey"/>
-                <constraint firstAttribute="trailing" secondItem="msQ-2o-cSa" secondAttribute="trailing" constant="5" id="kgl-Do-4fR"/>
-                <constraint firstItem="msQ-2o-cSa" firstAttribute="top" secondItem="mQ4-42-fdx" secondAttribute="bottom" id="sug-zI-BQ1"/>
+                <constraint firstAttribute="bottom" secondItem="8dA-oi-VHY" secondAttribute="bottom" id="JRr-JB-KNm"/>
+                <constraint firstItem="5xb-NB-O33" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OwE-y4-D5f"/>
+                <constraint firstItem="8dA-oi-VHY" firstAttribute="leading" secondItem="5xb-NB-O33" secondAttribute="trailing" constant="10" id="ZIQ-a7-010"/>
+                <constraint firstAttribute="trailing" secondItem="8dA-oi-VHY" secondAttribute="trailing" constant="10" id="fms-f4-YWo"/>
             </constraints>
+            <point key="canvasLocation" x="442" y="264"/>
         </view>
     </objects>
 </document>

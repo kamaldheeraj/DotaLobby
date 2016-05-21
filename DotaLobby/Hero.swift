@@ -16,7 +16,7 @@ class Hero{
     var largeImageURL:String?
     var smallImageURL:String?
     var portraitImageURL:String?
-    
+    var heroSoundURL:String = ""
     init(heroDotaName:String,heroLocalizedName:String,heroID:Int,largeImageURL:String,smallImageURL:String,portraitImageURL:String){
         self.heroDotaName = heroDotaName
         self.heroLocalizedName = heroLocalizedName

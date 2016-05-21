@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HeroDetailViewController: UIViewController {
     
@@ -32,12 +33,36 @@ class HeroDetailViewController: UIViewController {
     
     @IBOutlet var abilityView1: AbilityView!
     
+    @IBOutlet var scrollView: UIScrollView!
+    
+    
+    @IBOutlet var scrollViewBottomContraint: NSLayoutConstraint!
+    
+    var audioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let view = heroImageView{
+            let shadowPath = UIBezierPath(rect: view.bounds)
+            view.layer.masksToBounds = false
+            view.layer.shadowColor = UIColor.blackColor().CGColor
+            view.layer.shadowOffset = CGSizeMake(0.0, 5.0)
+            view.layer.shadowOpacity = 0.5
+            view.layer.shadowPath = shadowPath.CGPath
+        }
         if hero != nil {
             self.navigationItem.title = hero?.heroLocalizedName
             downloadImageFromURL(hero!.portraitImageURL!, forImageView: heroImageView)
+            let name = hero!.heroLocalizedName
+            let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!)
+            print(name)
+            do{
+                audioPlayer = try AVAudioPlayer(contentsOfURL: url)
+                audioPlayer.play()
+            }
+            catch{
+                print("Error playing audio")
+            }
             parseHeroWithName(hero!.heroLocalizedName.stringByReplacingOccurrencesOfString(" ", withString: "_"))
         }
     }
@@ -66,7 +91,8 @@ class HeroDetailViewController: UIViewController {
         var heroDetailAbilities = [Ability]()
         //print("Parse Start")
         //guard let url = NSURL(string: "http://dota2.gamepedia.com/Abaddon") else{
-        guard let url = NSURL(string: "http://www.dota2.com/hero/\(name.capitalizedString)/") else{
+        guard let url = NSURL(string: "http://www.dota2.com/hero/\(name.stringByReplacingOccurrencesOfString("'", withString: ""))/") else{
+            print(name)
             print("Hero URL error")
             return
         }
@@ -267,7 +293,7 @@ class HeroDetailViewController: UIViewController {
                         abilityCommonName = node.content
                     }
                     if node.tagName == "p"{
-                        abilityDescription = node.content
+                        abilityDescription = node.content.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet()).joinWithSeparator("")
                     }
                 }
                 if let abilityImageDivNodes = abilityImageDiv.children as? [TFHppleElement]{
@@ -297,6 +323,23 @@ class HeroDetailViewController: UIViewController {
         downloadImageFromURL(heroDetail!.abilities[0].urlSmall, forImageView: abilityView1.imageView)
         abilityView1.titleLabel.text = heroDetail!.abilities[0].name
         abilityView1.abilityDescription.text = heroDetail!.abilities[0].description
+        print(abilityView1.abilityDescription.text)
+        print(abilityView1.frame.size.width)
+        print(self.view.frame.size.width)
+        var currentY = abilityView1.frame.origin.y
+        for i in 1...heroDetail!.abilities.count-1{
+            let abilityView = AbilityView()
+            downloadImageFromURL(heroDetail!.abilities[i].urlSmall, forImageView: abilityView.imageView)
+            abilityView.titleLabel.text = heroDetail!.abilities[i].name
+            abilityView.abilityDescription.text = heroDetail!.abilities[i].description
+            abilityView.frame = abilityView1.frame
+            currentY += 110
+            abilityView.frame.origin.y = currentY
+            abilityView.frame.size.width = self.view.frame.size.width
+            scrollView.addSubview(abilityView)
+            scrollViewBottomContraint.constant += 110
+            print(abilityView.abilityDescription.text)
+        }
         //let end = NSDate();
         //let timeInterval: Double = end.timeIntervalSinceDate(start);
         //print(timeInterval)

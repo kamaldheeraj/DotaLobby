@@ -19,6 +19,14 @@ class HeroTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        if let view = heroImageView{
+            let shadowPath = UIBezierPath(rect: view.bounds)
+            view.layer.masksToBounds = false
+            view.layer.shadowColor = UIColor.blackColor().CGColor
+            view.layer.shadowOffset = CGSizeMake(0.0, 5.0)
+            view.layer.shadowOpacity = 0.5
+            view.layer.shadowPath = shadowPath.CGPath
+        }
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
