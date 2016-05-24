@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var currentAuthorizationFlow:OIDAuthorizationFlowSession?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         UITabBar.appearance().tintColor = UIColor(red: 195/255, green: 61/255, blue: 43/255, alpha: 1.0)

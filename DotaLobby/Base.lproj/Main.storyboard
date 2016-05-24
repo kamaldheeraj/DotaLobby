@@ -349,13 +349,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-ED-I6R" userLabel="Steam Login View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoE-ad-Vy3">
+                                        <rect key="frame" x="241" y="250" width="118" height="51"/>
+                                        <state key="normal" image="SteamButton"/>
+                                        <connections>
+                                            <action selector="steamButtonPressed:" destination="6er-w3-bXv" eventType="touchUpInside" id="s7l-qH-uhX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="aoE-ad-Vy3" firstAttribute="centerY" secondItem="ysk-ED-I6R" secondAttribute="centerY" id="SQf-b1-ryl"/>
+                                    <constraint firstItem="aoE-ad-Vy3" firstAttribute="centerX" secondItem="ysk-ED-I6R" secondAttribute="centerX" id="i8l-sf-3On"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ysk-ED-I6R" firstAttribute="centerX" secondItem="Kv0-I3-jG6" secondAttribute="centerX" id="0eP-vv-D3L"/>
                             <constraint firstItem="ria-XS-sFO" firstAttribute="centerY" secondItem="Kv0-I3-jG6" secondAttribute="centerY" id="2Q5-BQ-jxl"/>
                             <constraint firstItem="ria-XS-sFO" firstAttribute="height" secondItem="Kv0-I3-jG6" secondAttribute="height" id="Dks-yJ-Fbg"/>
+                            <constraint firstItem="ysk-ED-I6R" firstAttribute="width" secondItem="Kv0-I3-jG6" secondAttribute="width" id="KCl-F0-Wao"/>
+                            <constraint firstItem="ysk-ED-I6R" firstAttribute="centerY" secondItem="Kv0-I3-jG6" secondAttribute="centerY" id="NEZ-3y-n7V"/>
                             <constraint firstItem="ria-XS-sFO" firstAttribute="centerX" secondItem="Kv0-I3-jG6" secondAttribute="centerX" id="eSS-lp-3fu"/>
                             <constraint firstItem="ria-XS-sFO" firstAttribute="width" secondItem="Kv0-I3-jG6" secondAttribute="width" id="ekS-6N-uiJ"/>
+                            <constraint firstItem="ysk-ED-I6R" firstAttribute="height" secondItem="Kv0-I3-jG6" secondAttribute="height" id="gtC-QD-QAi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Matches" id="R3x-a7-9PV"/>
@@ -441,6 +462,7 @@
         <image name="Defense" width="39" height="37"/>
         <image name="Intelligence" width="33" height="33"/>
         <image name="Speed" width="63" height="39"/>
+        <image name="SteamButton" width="118" height="51"/>
         <image name="Strength" width="33" height="33"/>
         <image name="hero" width="17" height="25"/>
         <image name="item" width="25" height="25"/>

@@ -9,10 +9,22 @@
 import UIKit
 
 class MatchesViewController: UIViewController {
+    
+    let authorizationEndpoint =
+    NSURL(string:"https://accounts.google.com/o/oauth2/v2/auth")
+    
+    let tokenEndpoint =
+    NSURL(string:"https://www.googleapis.com/oauth2/v4/token")
+    
+    var authState:OIDAuthState?
+    
+    var configuration:OIDServiceConfiguration?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configuration = OIDServiceConfiguration(authorizationEndpoint: authorizationEndpoint!, tokenEndpoint: tokenEndpoint!)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,14 +34,9 @@ class MatchesViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func steamButtonPressed(sender: AnyObject) {
+        let request = OIDAuthorizationRequest(configuration: configuration!, clientId: "", scopes: [OIDScopeOpenID,OIDScopeProfile], redirectURL: NSURL(string:"com.sillyapps.DotaLobby:/oauthredirect")!, responseType: OIDResponseTypeCode, additionalParameters: nil)
     }
-    */
+    
 
 }

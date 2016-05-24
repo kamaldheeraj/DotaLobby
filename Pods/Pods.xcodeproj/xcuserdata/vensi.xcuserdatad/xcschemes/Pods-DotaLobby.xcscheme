@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4533BC50CE8FDEA43BB3056E96519DAD"
+               BlueprintIdentifier = "46868A4C4A4F2215E2595D39A86C2137"
                BuildableName = "Pods_DotaLobby.framework"
                BlueprintName = "Pods-DotaLobby"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4533BC50CE8FDEA43BB3056E96519DAD"
+            BlueprintIdentifier = "46868A4C4A4F2215E2595D39A86C2137"
             BuildableName = "Pods_DotaLobby.framework"
             BlueprintName = "Pods-DotaLobby"
             ReferencedContainer = "container:Pods.xcodeproj">

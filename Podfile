@@ -8,5 +8,4 @@ use_frameworks!
 target 'DotaLobby' do
   # Pods for DotaLobby
     pod 'Alamofire', '~>3.4'
-    pod 'AppAuth'
 end
