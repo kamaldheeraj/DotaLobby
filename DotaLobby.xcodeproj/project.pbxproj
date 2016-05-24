@@ -349,7 +349,6 @@
 				28FBEFB91CEE39E500DFFB90 /* TFHppleElement.m */,
 				28FBEFBA1CEE39E500DFFB90 /* XPathQuery.h */,
 				28FBEFBB1CEE39E500DFFB90 /* XPathQuery.m */,
-				28FBEFB51CEE39E500DFFB90 /* DotaLobby-Bridging-Header.h */,
 			);
 			name = TFHpple;
 			sourceTree = "<group>";
@@ -484,6 +483,7 @@
 		E7695284E3D4C28CAD48DB35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28FBEFB51CEE39E500DFFB90 /* DotaLobby-Bridging-Header.h */,
 				28FBF0A91CEFD9B500DFFB90 /* AVFoundation.framework */,
 				28FBEFC01CEE3A1D00DFFB90 /* libxml2.2.tbd */,
 				28FBEFB41CEE39CB00DFFB90 /* TFHpple */,
