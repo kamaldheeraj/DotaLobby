@@ -58,7 +58,7 @@ class HeroesViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     func downloadHeroesFromAPI(){
-        Alamofire.request(.GET, "http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v0001/?key=AB1D26186DE124C7CCA58075043D3B75",parameters: ["language":"en-us"],encoding: .URL).validate().responseJSON(){
+        Alamofire.request(.GET, "http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v0001/?key=29F8F26D275F5540E7BB0A6A3FC02D06",parameters: ["language":"en-us"],encoding: .URL).validate().responseJSON(){
             response in
             guard response.result.isSuccess else{
                 print("Error while fetching Heroes list : \(response.result.error)")

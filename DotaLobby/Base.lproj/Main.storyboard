@@ -290,11 +290,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ZZ-km-AKP">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -342,28 +342,25 @@
                         <viewControllerLayoutGuide type="bottom" id="RFe-w0-yDP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kv0-I3-jG6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ria-XS-sFO">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysk-ED-I6R" userLabel="Steam Login View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoE-ad-Vy3">
-                                        <rect key="frame" x="241" y="250" width="118" height="51"/>
-                                        <state key="normal" image="SteamButton"/>
-                                        <connections>
-                                            <action selector="steamButtonPressed:" destination="6er-w3-bXv" eventType="touchUpInside" id="s7l-qH-uhX"/>
-                                        </connections>
-                                    </button>
+                                    <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwG-hH-c5k">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                    </webView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="aoE-ad-Vy3" firstAttribute="centerY" secondItem="ysk-ED-I6R" secondAttribute="centerY" id="SQf-b1-ryl"/>
-                                    <constraint firstItem="aoE-ad-Vy3" firstAttribute="centerX" secondItem="ysk-ED-I6R" secondAttribute="centerX" id="i8l-sf-3On"/>
+                                    <constraint firstItem="nwG-hH-c5k" firstAttribute="centerX" secondItem="ysk-ED-I6R" secondAttribute="centerX" id="fLA-c5-DNd"/>
+                                    <constraint firstItem="nwG-hH-c5k" firstAttribute="width" secondItem="ysk-ED-I6R" secondAttribute="width" id="grZ-6A-qEw"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -374,12 +371,17 @@
                             <constraint firstItem="ria-XS-sFO" firstAttribute="height" secondItem="Kv0-I3-jG6" secondAttribute="height" id="Dks-yJ-Fbg"/>
                             <constraint firstItem="ysk-ED-I6R" firstAttribute="width" secondItem="Kv0-I3-jG6" secondAttribute="width" id="KCl-F0-Wao"/>
                             <constraint firstItem="ysk-ED-I6R" firstAttribute="centerY" secondItem="Kv0-I3-jG6" secondAttribute="centerY" id="NEZ-3y-n7V"/>
+                            <constraint firstItem="nwG-hH-c5k" firstAttribute="top" secondItem="Eup-DL-Bki" secondAttribute="bottom" id="S5m-4C-iv8"/>
+                            <constraint firstItem="RFe-w0-yDP" firstAttribute="top" secondItem="nwG-hH-c5k" secondAttribute="bottom" id="cXi-v5-OSf"/>
                             <constraint firstItem="ria-XS-sFO" firstAttribute="centerX" secondItem="Kv0-I3-jG6" secondAttribute="centerX" id="eSS-lp-3fu"/>
                             <constraint firstItem="ria-XS-sFO" firstAttribute="width" secondItem="Kv0-I3-jG6" secondAttribute="width" id="ekS-6N-uiJ"/>
                             <constraint firstItem="ysk-ED-I6R" firstAttribute="height" secondItem="Kv0-I3-jG6" secondAttribute="height" id="gtC-QD-QAi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Matches" id="R3x-a7-9PV"/>
+                    <connections>
+                        <outlet property="webView" destination="nwG-hH-c5k" id="JFB-O4-hRu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jg-h8-PJJ" sceneMemberID="firstResponder"/>
             </objects>
@@ -415,7 +417,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lkc-S5-0v6" userLabel="Items Navigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Items" image="item" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cCK-FQ-m3a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="cCK-FQ-m3a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.13725490200000001" green="0.14117647059999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
@@ -438,7 +440,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9HI-M3-hZr" userLabel="Matches Navigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Matches" image="match" id="vYg-tx-VOW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iIx-Cj-5FO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="iIx-Cj-5FO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.13725490200000001" green="0.14117647059999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
@@ -462,7 +464,6 @@
         <image name="Defense" width="39" height="37"/>
         <image name="Intelligence" width="33" height="33"/>
         <image name="Speed" width="63" height="39"/>
-        <image name="SteamButton" width="118" height="51"/>
         <image name="Strength" width="33" height="33"/>
         <image name="hero" width="17" height="25"/>
         <image name="item" width="25" height="25"/>
